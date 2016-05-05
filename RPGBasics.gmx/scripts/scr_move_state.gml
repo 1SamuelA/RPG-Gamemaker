@@ -1,12 +1,19 @@
 ///scr_move_state
 scr_get_input();
 
-//get axis
-var xaxis = (right_key - left_key);
-var yaxis = (down_key - up_key);
+
+if (dash_key) {
+    state= scr_dash_state;
+    alarm[0] = room_speed/4;
+}
+
+if (attack_key) {
+    image_index = 0;
+    state= scr_attack_state;
+}
 
 // Get Direction
-var dir = point_direction(0,0,xaxis,yaxis);
+dir = point_direction(0,0,xaxis,yaxis);
 
 //get lenght
 if (xaxis == 0 and yaxis == 0){

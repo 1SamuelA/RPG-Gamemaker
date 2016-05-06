@@ -19,6 +19,7 @@ dir = point_direction(0,0,xaxis,yaxis);
 if (xaxis == 0 and yaxis == 0){
     len = 0;
 } else {
+    scr_get_face();
     len = spd;
 }
 
@@ -35,17 +36,19 @@ image_speed = 0.2;
 if (len == 0) image_index = 0;
 
 // vertical
-if (vspd >0) {
-    sprite_index = spr_player_down;
-} else if (vspd < 0) {
-    sprite_index = spr_player_up;
-}
 
-// Horizontal
-if (hspd >0) {
-    sprite_index = spr_player_right;
-} else if (hspd < 0) {
-    sprite_index = spr_player_left;
+switch(face){
+    case RIGHT:
+        sprite_index = spr_player_right;
+        break;
+    case UP:
+        sprite_index = spr_player_up;
+        break;
+    case LEFT:
+        sprite_index = spr_player_left;
+        break;
+    case DOWN:
+        sprite_index = spr_player_down;
+        break;
 }
-
 

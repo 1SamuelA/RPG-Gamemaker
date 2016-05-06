@@ -28,12 +28,23 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player_states">
-      <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_move_state.gml</script>
       <script>scripts\scr_dash_state.gml</script>
       <script>scripts\scr_attack_state.gml</script>
     </scripts>
-    <script>scripts\scr_get_face.gml</script>
+    <scripts name="Helper Scripts">
+      <script>scripts\scr_get_face.gml</script>
+      <script>scripts\scr_get_input.gml</script>
+      <scripts name="enemy helper scripts">
+        <script>scripts\scr_enemy_choose_next_state.gml</script>
+        <script>scripts\scr_check_for_player.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="enemy States">
+      <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_enemy_wonder_state.gml</script>
+      <script>scripts\scr_enemy_chase_state.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>

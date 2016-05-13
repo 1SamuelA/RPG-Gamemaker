@@ -8,8 +8,10 @@
   <sprites name="sprites">
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_enemy_slime</sprite>
+    <sprite>sprites\spr_enemy_slime_2</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_left</sprite>
       <sprite>sprites\spr_player_up</sprite>
@@ -21,6 +23,9 @@
       <sprite>sprites\spr_player_attack_right</sprite>
       <sprite>sprites\spr_player_attack_down</sprite>
     </sprites>
+    <sprite>sprites\spr_expr</sprite>
+    <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_bat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -35,6 +40,7 @@
     <scripts name="Helper Scripts">
       <script>scripts\scr_get_face.gml</script>
       <script>scripts\scr_get_input.gml</script>
+      <script>scripts\scr_chance.gml</script>
       <scripts name="enemy helper scripts">
         <script>scripts\scr_enemy_choose_next_state.gml</script>
         <script>scripts\scr_check_for_player.gml</script>
@@ -42,8 +48,10 @@
     </scripts>
     <scripts name="enemy States">
       <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_enemy_stall_state.gml</script>
       <script>scripts\scr_enemy_wonder_state.gml</script>
       <script>scripts\scr_enemy_chase_state.gml</script>
+      <script>scripts\scr_enemy_movement.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -56,9 +64,14 @@
       <object>objects\obj_player</object>
       <object>objects\obj_lifeform_parent</object>
     </objects>
+    <object>objects\obj_player_stats</object>
+    <object>objects\obj_expr</object>
+    <object>objects\obj_health</object>
+    <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
+    <room>rooms\rm_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

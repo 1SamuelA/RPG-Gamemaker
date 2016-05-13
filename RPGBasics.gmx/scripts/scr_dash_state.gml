@@ -1,4 +1,7 @@
 //get lenght
+if (len == 0){
+    dir = face*90;
+}
 len = spd*4
 
 // get vspd & hspd
